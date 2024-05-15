@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enhanced HTML App</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,17 +18,24 @@
         h1 {
             color: #333;
         }
+        button {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Hello, Docker!</h1>
     <p>Welcome to my enhanced simple HTML application running in a Docker container.</p>
-    <button onclick="showDate()">What's the date?</button>
-    <p id="date"></p>
+    <button class="btn btn-primary" onclick="showDate()">What's the date? <i class="fas fa-calendar-day"></i></button>
+    <p id="date" class="mt-3"></p>
     <script>
         function showDate() {
             document.getElementById('date').textContent = 'Today is ' + new Date().toDateString();
         }
     </script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
