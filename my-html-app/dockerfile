@@ -1,0 +1,17 @@
+# Use an official lightweight nginx image as a parent image
+FROM nginx:stable-alpine
+
+# Set the working directory inside the container
+WORKDIR /usr/share/nginx/html
+
+# Remove default nginx static files
+RUN rm -rf ./*
+
+# Copy the HTML file from your host to the container's working directory
+COPY index.html index.html
+
+# Expose port 80 on the container
+EXPOSE 80
+
+# Run nginx in the foreground
+CMD ["nginx", "-g", "daemon off;"]

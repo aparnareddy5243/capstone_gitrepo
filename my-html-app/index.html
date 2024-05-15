@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML App</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, Docker!</h1>
+    <p>Welcome to my enhanced simple HTML application running in a Docker container.</p>
+    <button onclick="showDate()">What's the date?</button>
+    <p id="date"></p>
+    <script>
+        function showDate() {
+            document.getElementById('date').textContent = 'Today is ' + new Date().toDateString();
+        }
+    </script>
+</body>
+</html>
